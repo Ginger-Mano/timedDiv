@@ -1,5 +1,6 @@
 let appBase = document.querySelector(".base")
 
+let count = 0
 
 let showDiv = (() => {
     let showDivMain = document.createElement("div")
@@ -9,29 +10,46 @@ let showDiv = (() => {
     // fcDiv.className = "btnDiv"
     let firstCount = document.createElement('button')
     firstCount.className = "header"
-    firstCount.innerHTML = "0"
+    firstCount.innerHTML = count
 
+  
     firstCount.addEventListener("click", (evt) => {
-        console.log("count")
+        
+        setInterval(function() {firstCount.innerHTML = count++}, 1000);
     })
 
     // let scDiv = document.createElement("div")
     // scDiv.className = "btnDiv"
     let secondCount = document.createElement('button')
     secondCount.className = "header"
-    secondCount.innerHTML = "num2"
+    secondCount.innerHTML = count
+
+    secondCount.onclick = () => {
+        let count2 = 0
+        setInterval(function() {secondCount.innerHTML = count2++}, 250);
+    }
 
     // let tcDiv = document.createElement("div")
     // tcDiv.className = "btnDiv"
     let thirdCount = document.createElement('button')
     thirdCount.className = "header"
-    thirdCount.innerHTML = "num3"
+    thirdCount.innerHTML = count
+
+   thirdCount.addEventListener("click", (evt) => {
+        let count3 = 0 
+        setInterval(function() {thirdCount.innerHTML = count3 += 5}, 1000);
+    })
 
     // let fthcDiv = document.createElement("div")
     // fthcDiv.className = "btnDiv"
     let fourthCount = document.createElement('button')
     fourthCount.className = "header"
-    fourthCount.innerHTML = "num4"
+    fourthCount.innerHTML = count
+
+    fourthCount.addEventListener("click", (evt) => {
+        let count4 = 0 
+        setInterval(function() {fourthCount.innerHTML = count4 += 10}, 50);
+    })
 
 
 

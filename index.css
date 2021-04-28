@@ -1,22 +1,19 @@
 .main {
     background-color: aqua;
+  
 }
 
 .showDiv {
-    width: 50%;
-    /* grid-template-columns: auto auto;
-    align-items: center; */
+  
+    grid-template-columns: auto auto;
+
 }
 
-/* .btnDiv {
-    width: 150px;
-    align-content: center;
-} */
 
 .header {
     background-color: black;
     color: white;
     font-size: x-large;
     font-family: Arial;
-    padding: 100px
+    padding: 200px
 }
