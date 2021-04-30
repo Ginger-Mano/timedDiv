@@ -1,6 +1,7 @@
 let appBase = document.querySelector(".base")
 
 let count = 0
+let click = true
 
 let showDiv = (() => {
     let showDivMain = document.createElement("div")
@@ -37,7 +38,7 @@ let showDiv = (() => {
 
    thirdCount.addEventListener("click", (evt) => {
         let count3 = 0 
-        setInterval(function() {thirdCount.innerHTML = count3 += 5}, 1000);
+        setInterval(function () {thirdCount.innerHTML = count3 += 5}, 1000);
     })
 
     // let fthcDiv = document.createElement("div")
@@ -47,8 +48,22 @@ let showDiv = (() => {
     fourthCount.innerHTML = count
 
     fourthCount.addEventListener("click", (evt) => {
+        
         let count4 = 0 
-        setInterval(function() {fourthCount.innerHTML = count4 += 10}, 50);
+        let timed = setInterval(set, 50);
+
+        function set() {fourthCount.innerHTML = count4 += 5}
+        
+        if (click = !true) {
+            timeStop()
+        }
+        
+        function timeStop() {
+       
+          clearInterval(timed)
+          
+    }
+
     })
 
 
