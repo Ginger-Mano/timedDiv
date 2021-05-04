@@ -4,10 +4,12 @@
 }
 
 .showDiv {
-  
+  width: 60%;
     grid-template-columns: auto auto;
+    margin: auto
 
 }
+
 
 
 .header {
@@ -15,5 +17,6 @@
     color: white;
     font-size: x-large;
     font-family: Arial;
-    padding: 200px
+    padding: 200px;
+    
 }
