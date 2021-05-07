@@ -7,8 +7,6 @@ let showDiv = (() => {
     let showDivMain = document.createElement("div")
     showDivMain.className = "showDiv"
 
-    // let fcDiv = document.createElement("div")
-    // fcDiv.className = "btnDiv"
     let firstCount = document.createElement('button')
     firstCount.className = "header"
     firstCount.innerHTML = count
@@ -19,8 +17,7 @@ let showDiv = (() => {
         setInterval(function() {firstCount.innerHTML = count++}, 1000);
     })
 
-    // let scDiv = document.createElement("div")
-    // scDiv.className = "btnDiv"
+
     let secondCount = document.createElement('button')
     secondCount.className = "header"
     secondCount.innerHTML = count
