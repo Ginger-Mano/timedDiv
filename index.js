@@ -4,49 +4,80 @@ let count = 0,
     count2 = 0,
     count3 = 0,
     count4 = 0,
-    initiate,
-    one,
-    two,
-    three,
-    four;
+    initiated,
+    active = false;
 
 let showDiv = (() => {
+
     let showDivMain = document.createElement("div")
-    showDivMain.className = "showDiv"
+        showDivMain.className = "showDiv"
+
 
     let firstCount = document.createElement('button')
-    firstCount.className = "header"
-    firstCount.innerHTML = count
+        firstCount.className = "header"
+        firstCount.innerHTML = count
+
+    let firstBox = () => {
+        initiated = setInterval(function() {firstCount.innerHTML = count++}, 1000);
+    }
+
 
     let secondCount = document.createElement('button')
-    secondCount.className = "header"
-    secondCount.innerHTML = count
+        secondCount.className = "header"
+        secondCount.innerHTML = count
+
+    let secondBox = () => {
+        initiated = setInterval(function() {secondCount.innerHTML = count2++}, 250);
+    }
+
 
     let thirdCount = document.createElement('button')
-    thirdCount.className = "header"
-    thirdCount.innerHTML = count
+        thirdCount.className = "header"
+        thirdCount.innerHTML = count
+
+    let thirdBox = () => {
+        initiated = setInterval(function () {thirdCount.innerHTML = count3 += 5}, 1000);
+    }
+
 
     let fourthCount = document.createElement('button')
-    fourthCount.className = "header"
-    fourthCount.innerHTML = count
+        fourthCount.className = "header"
+        fourthCount.innerHTML = count
+
+    let fourthBox = () => {
+        initiated = setInterval(function (){fourthCount.innerHTML = count4 += 5}, 500);
+    }
+
 
     let start = document.createElement('button')
-    start.innerHTML = "start"
+        start.innerHTML = "start"
 
     start.addEventListener("click", (evt) => {
-        one = setInterval(function() {firstCount.innerHTML = count++}, 1000);
-        two = setInterval(function() {secondCount.innerHTML = count2++}, 250);
-        three = setInterval(function () {thirdCount.innerHTML = count3 += 5}, 1000);
-        four = setInterval(function (){fourthCount.innerHTML = count4 += 5}, 500)
+        firstBox() , secondBox()
+        thirdBox() , fourthBox()
     })
+
 
     let reset = document.createElement('button')
-    reset.innerHTML = "reset"
+        reset.innerHTML = "reset"
 
     reset.addEventListener("click", (evt) => {
-       
+       if (initiated) {
+        clearInterval(initiated)
+        count = 0;
+        count2 = 0; 
+        count3 = 0;
+        count4 = 0;
+        firstCount.innerHTML = count;
+        secondCount.innerHTML = count2;
+        thirdCount.innerHTML = count3;
+        fourthCount.innerHTML = count4;
+        console.log(initiated)
+           
+       }
     })
 
+    
     let pause = document.createElement("button")
     pause.innerHTML = "pause"
 
