@@ -64,20 +64,17 @@ let showDiv = (() => {
     reset.addEventListener("click", (evt) => {
        if (initiated) {
         clearInterval(initiated)
-        count = 0;
-        count2 = 0; 
-        count3 = 0;
-        count4 = 0;
-        firstCount.innerHTML = count;
-        secondCount.innerHTML = count2;
-        thirdCount.innerHTML = count3;
-        fourthCount.innerHTML = count4;
+        let counts = 0
+        firstCount.innerHTML = counts;
+        secondCount.innerHTML = counts;
+        thirdCount.innerHTML = counts;
+        fourthCount.innerHTML = counts;
         console.log(initiated)
            
        }
     })
 
-    
+
     let pause = document.createElement("button")
     pause.innerHTML = "pause"
 
